@@ -1,0 +1,1 @@
+Tähän tulee kopio mitä opintojakso tulee pitämään sisällään. 
