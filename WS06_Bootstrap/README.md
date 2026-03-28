@@ -1,0 +1,1 @@
+Tämä on työpaja WS06 kansio.
