@@ -6,7 +6,7 @@ p {
     }
     
     body {
-      background-color: rgb(215, 223, 226);
+      background-color: rgb(218, 232, 238);
     }
     
     h1 {
@@ -17,10 +17,10 @@ p {
   margin: 35px;
   background-color: #d4d3d3;
   border: 3px solid #187c29;
+  border-radius: 15px;
 }
 table {
       width: 100%;
-      border-collapse: collapse;
     }
     
     th, td {
