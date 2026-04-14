@@ -1,0 +1,209 @@
+h2 {
+      color: rgb(105, 27, 86);
+    }
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+    .animated-banner {
+        background-color: steelblue;
+        color: #ffffff;
+        font-family: Georgia, serif;
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-align: center;
+        padding: 14px 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        animation: slideInDown 0.8s ease-out forwards;
+}
+body {
+      background-color: rgb(218, 232, 238);
+    }
+p {
+      color: rgb(7, 70, 51);
+    }
+
+img {
+      width: 300px;
+      border-radius: 12px;
+      border: 2px solid rgb(167, 70, 180);
+      box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+      display:block;
+      margin: 16px 0;
+      filter: grayscale(100%) birghtness(80%);
+      transition: all 0.5s ease-in-out;
+}
+
+img:hover {
+      filter: none;
+      transform: scale(1.1);
+      box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4);
+}
+.filter-image {
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+      }
+ol {  
+      background-color: #e8f4fd;
+      border: 2px solid steelblue;
+      border-radius: 8px;
+      padding: 12px 12px 12px 36px;
+      max-width: 400px;
+      list-style-type: decimal;
+      color: #1a3a5c;
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      line-height: 2;
+}
+
+ol li:nth-child(odd) {
+      background-color: #d0e8f8;
+      border-radius: 4px;
+      padding-left: 4px;
+}
+ol li:nth-child(even) {
+      background-color: #b8d8f0;
+      border-radius: 4px;
+      padding-left: 4px;
+}
+ul {
+      background-color: #e8f4fd;
+      border: 2px solid rgb(184, 64, 154);
+      border-radius: 8px;
+      padding: 12px 12px 12px 36px;
+      max-width: 400px;
+      list-style-type: square;
+      color: #3b0d2e;
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      line-height: 2;
+}
+
+h1 {
+      font-size: 3em;
+    } 
+.content-box {
+  padding: 25px;
+  margin: 35px;
+  background-color: #d4d3d3;
+  border: 3px solid #187c29;
+  border-radius: 15px;
+}
+table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      border: 1px solid #130505;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #d59eda;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin: 30px;
+    }
+    
+    label {
+      font-weight: bold;
+    }
+    
+    input[type="text"], input[type="email"] {
+      padding: 5px;
+      border: 3px solid #ddd;
+      border-radius: 10px;
+    }
+    
+    input[type="submit"] {
+      background-color: #0a5e37;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #a263b6;
+    }
+    .transition-button {
+        background-color: rgb(231, 194, 149);
+        padding: 10px 100px;
+        margin: 35px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .transition-button:hover {
+        background-color: rgb(229, 124, 243);
+      }
+      .animation-box {
+        width: 200px;
+        height: 20px;
+        background-color: lightgreen;
+        position: relative;
+        animation: move 3s infinite alternate;
+      }
+      
+      @keyframes move {
+        from {
+          left: 0;
+        }
+        to {
+          left: 100px;
+        }
+      }
+      .pseudo-list li:nth-child(odd) {
+        background-color: rgb(241, 168, 231);
+        border-radius: 4px;
+        
+      }
+
+      .pseudo-list li:nth-child(even) {
+        background-color: rgb(112, 196, 221);
+        border-radius: 4px;
+      }
+      
+      .filter-image {
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+      }
+
+      .filter-image:hover {
+        filter: grayscale(0%);
+      }
+      
+
+      .quote {
+        position: relative;
+        padding-left: 20px;
+        font-style: italic;
+      }
+      
+      .quote::before {
+        content: '“';
+        font-size: 40px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: lightgray;
+      }
+
