@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mikaelan HTML sivu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="animated-banner">Tervetuloa verkkosivuilleni!</div>
+    <header>
+      <h1 style="color: rgb(27, 73, 75)">Mikaela Klinga</h1>
+      <nav class="responsive-nav">
+        <button class="menu-toggle">☰ Menu</button>
+        <ul class="nav-list">
+          <li><a href="#esittely">Esittely</a></li>
+          <li><a href="#nuoruuden-harrastukset">Nuoruuden harrastukset</a></li>
+          <li><a href="#yhteydenotto">Yhteydenotto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="esittely">
+        <h2>Esittely</h2>
+        <p>
+          Olen korkeakouluopiskelija ja harrastan opiskelujen ohessa pyöräilyä.
+          Päätin tämän alkuvuoden aikana, että aion panostaa pyöräilyyn
+          tavoitteellisemmin. Se ei kuitenkaan vie fokusta opiskelusta, vaan
+          tasapainottaa oppimista sopivasti. Tämän lisäksi teen osa-aikatyötä
+          kuntosalilla, jonka koen myös kompensoivaksi tekemiseksi opiskelun
+          rinnalle. Rakastan urheilemista, mutta rentoutuminen avannossa tai
+          iltaisin sohvalla on myös ihanaa. Olen määrätietoinen ja
+          pitkäjänteinen tyyppi, en kuitenkaan ota kaikkea liian vakavasti vaan
+          hassuttelukin kuuluu elämääni.
+        </p>
+      </section>
+    </main>
+
+    <img
+      src="./images/minun-kuva.jpg"
+      alt="Kuvalinkki on rikki.."
+      class="filter-image image-1"
+    />
+
+    <h2 id="nuoruuden-harrastukset">Nuoruuden harrastukset</h2>
+
+    <ol>
+      <li>Judo</li>
+      <li>Telinevoimistelu</li>
+      <li>Kansantanssi</li>
+      <li>Mäkihyppy</li>
+    </ol>
+
+    <h2>Nykyiset harrastukset</h2>
+
+    <ul class="list-style-1">
+      <li>Pyöräily</li>
+      <li>Kuntosali</li>
+      <li>Avantouinti</li>
+    </ul>
+
+    <a href="https://www.cyclingweekly.com">Viikon pyöräily uutiset</a>
+
+    <img
+      src="./images/kuva-bikepacking.jpg"
+      alt="Sample Image"
+      class="filter-image image-1"
+    />
+
+    <blockquote class="quote">
+      Tämän kuva on ensimmäiseltä yön yli pyöräretkeltäni.
+    </blockquote>
+
+    <div class="content-box">
+      <h3>Harjoitus otsikko</h3>
+      <p>
+        Tätä on ollut hauska muokkailla ja kokeilla miltä kaikki näyttää eri
+        asetuksilla. :)
+      </p>
+    </div>
+
+    <table>
+      <tr>
+        <th>Suoritetut kurssit</th>
+        <th>Suorittamattomat kurssit</th>
+      </tr>
+      <tr>
+        <td>Asiantuntija viestintä ja projektityö</td>
+        <td>Professional communication in English</td>
+      </tr>
+      <tr>
+        <td>ICT-infrastruktuurin ja pilvipalveluiden perusteet</td>
+        <td>Websivuston kehittäminen</td>
+      </tr>
+      <tr>
+        <td>Digitaalisen palvelun perusteet</td>
+        <td>Liiketoimintaympäristöt</td>
+      </tr>
+    </table>
+
+    <button class="transition-button">Nappula</button>
+
+    <div class="animation-box"></div>
+
+    <ul class="pseudo-list list-style-1">
+      <li>Porkkana</li>
+      <li>Kurkku</li>
+      <li>Tomaatti</li>
+      <li>Peruna</li>
+    </ul>
+
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+    </div>
+
+    <div class="flex-container">
+      <div class="box">Boksi 1</div>
+      <div class="box">Boksi 2</div>
+      <div class="box">Boksi 3</div>
+    </div>
+
+    <div class="responsive-box">Väri muuttuu kun sivun kokoa pienentää.</div>
+
+    <div class="responsive-container">
+      <div class="column">
+        <img
+          src="./images/kuva-norja.jpg"
+          alt="Responsive Image"
+          class="responsive-image"
+        />
+      </div>
+      <div class="column">
+        <img
+          src="./images/kuva-norja-1.jpg"
+          alt="Responsive Image"
+          class="responsive-image"
+        />
+      </div>
+    </div>
+
+    <div class="media-query-box">Yläpuolella olevat kuvat on Norjasta.</div>
+
+    <form id="yhteydenotto">
+      <label for="name">Nimi:</label>
+      <input type="text" id="name" name="name" /><br /><br />
+      <label for="email">S-posti:</label>
+      <input type="email" id="email" name="email" /><br /><br />
+      <input type="submit" value="Lähetä" />
+    </form>
+    <footer>
+      <p>Copyright 2026 Mikaela Klinga</p>
+    </footer>
+  </body>
+</html>
