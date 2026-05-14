@@ -1,0 +1,104 @@
+/* Kuka minä olen -osio */
+.about-me-container {
+  display: flex; /* Tekee alielementit vierekkäin */
+  align-items: center; /* Keskittää pystysuunnassa */
+  gap: 30px; /* Väli tekstin ja kuvan välille */
+  max-width: 1200px; /* Maksimileveys isommilla näytöillä */
+  margin: 40px auto; /* Keskittää osion sivulla */
+  padding: 0 20px; /* Reunaväli */
+  box-sizing: border-box; /* Sisältää paddingin leveydessä */
+}
+
+/* Tekstin tyylit */
+.about-me-text {
+  flex: 1; /* Teksti vie jäljellä olevan tilan */
+  text-align: left; /* Tasataan vasempaan */
+}
+
+/* Tekstin otsikon ja kappaleen tyylit */
+.about-me-text h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem); /* Responsiivinen fonttikoko */
+  color: #F5F5F5; /* Tummanruskea väri */
+  margin-bottom: 15px;
+}
+
+.about-me-text p {
+  font-size: clamp(1rem, 2vw, 1.2rem); /* Responsiivinen fonttikoko */
+  color: #F5F5F5;
+  line-height: 1.6; /* Riviväli */
+}
+
+/* Kuvan kontin tyylit */
+.about-me-image {
+  flex: 0 0 300px; /* Kuvan leveys on kiinteä 300px */
+}
+
+.about-me-image img {
+  width: 100%; /* Kuva vie koko kontin leveydet */
+  height: auto; /* Korkeus skaalaantuu suhteessa */
+  border-radius: 8px; /* Pyöristetyt kulmat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Varjo */
+  object-fit: cover; /* Pidä kuvan suhde oikeana */
+}
+
+/* Sertificate box */
+.certificate-container {
+  margin-top: 32px;
+  padding: 24px;
+  background-color: #2A0A0F; /*burgundy card*/
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Hieman läpikuultava valkoinen reuna */
+  border-radius: 12px; /* pyöristetyt kulmat */
+}
+
+.certificate-container h3 {
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #F5F5F5;
+}
+
+.certificate-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certificate-container li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #B0B0B0; /* text-muted-foreground */
+}
+
+.certificate-container li:last-child {
+  margin-bottom: 0;
+}
+
+.certificate-container .bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #D4AF37; /* bg-accent (kultainen) */
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+/* Responssiivisuus mobiilille */
+@media (max-width: 768px) {
+  .about-me-container {
+    flex-direction: column; /* Aseta teksti ja kuva allekkain */
+    text-align: center; /* Keskitä teksti mobiilissa */
+    gap: 20px; /* Pienempi väli */
+  }
+
+  .about-me-text {
+    text-align: center; /* Keskitä teksti */
+  }
+
+  .about-me-image {
+    flex: 0 0 auto; /* Poista kiinteä leveys */
+    width: 100%; /* Kuva täyttää koko leveydensä */
+    max-width: 300px; /* Maksimileveys */
+    margin: 0 auto; /* Keskitetään kuva */
+  }
+}

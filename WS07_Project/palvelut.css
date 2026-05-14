@@ -1,0 +1,195 @@
+.active {
+    color: white; 
+}
+
+
+
+/* Suurentaa fonttikokoa */
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.image-text h5 {
+  margin: 0;
+  font-size: 50px;
+}
+
+
+
+
+/* TÄstä alaspäin on uudet tuotekorttien tyylit */
+/* Grid-layout palveluille */
+.palvelut-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 16px;
+}
+
+@media (min-width: 768px) {
+  .palvelut-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Palvelukortti */
+.palvelukortti {
+  background-color: #2A0A0F; /* bg-card */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* border-border */
+  border-radius: 12px;
+  padding: 32px;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.palvelukortti:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.palvelukortti:nth-child(2) {
+  animation-delay: 150ms;
+}
+
+.palvelukortti:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+.palvelukortti:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(128, 0, 32, 0.1),
+              0 10px 10px -5px rgba(128, 0, 32, 0.04);
+  border-color: rgba(212, 175, 55, 0.5); /* hover:border-accent/50 */
+}
+
+
+.palvelukortti-ikoni svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Otsikko */
+.palvelukortti h3 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #F5F5F5;
+}
+
+/* Kuvaus */
+.palvelukortti p {
+  color: #B0B0B0; /* text-muted-foreground */
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+/* Footer (kesto + hinta) */
+.palvelukortti-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kesto {
+  color: #B0B0B0; /* text-muted-foreground */
+}
+
+.hinta {
+  font-size: 24px;
+  font-weight: 700;
+  color: #D4AF37; /* text-accent */
+}
+
+/* Fade-in animaatio */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.osta-nappi {
+  margin-top: 24px;
+  padding: 8px 16px;
+  background-color: #800020; /* bg-primary */
+  color: #F5F5F5; /* text-primary-foreground */
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.osta-nappi:hover {
+  background-color: rgba(128, 0, 32, 0.9); /* hover:bg-primary/90 */
+}
+
+.certificate-container-centered {
+  text-align: center;
+}
+.certificate-container {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  padding: 24px;
+  background-color: #2A0A0F; /*burgundy card*/
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Hieman läpikuultava valkoinen reuna */
+  border-radius: 0px; /* pyöristetyt kulmat */
+  text-align: center;
+  
+}
+
+.certificate-container h3 {
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  color: #F5F5F5;
+}
+
+.certificate-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certificate-container li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #B0B0B0; /* text-muted-foreground */
+}
+
+.certificate-container li:last-child {
+  margin-bottom: 0;
+}
+
+.certificate-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; /* Keskittää listan */
+  max-width: fit-content; /* Varmistaa, että lista ei veny liian leveäksi */
+}
+
+.certificate-container li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; /* Keskittää listan sisällön */
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #B0B0B0;
+}
+
