@@ -1,104 +1,78 @@
-/* Kuka minä olen -osio */
+/* TIETOA TIEDOSTON LUOKAT JA TYYLIT */
+/* Kuka minä olen -osion asettelu */
 .about-me-container {
-  display: flex; /* Tekee alielementit vierekkäin */
-  align-items: center; /* Keskittää pystysuunnassa */
-  gap: 30px; /* Väli tekstin ja kuvan välille */
-  max-width: 1200px; /* Maksimileveys isommilla näytöillä */
-  margin: 40px auto; /* Keskittää osion sivulla */
-  padding: 0 20px; /* Reunaväli */
-  box-sizing: border-box; /* Sisältää paddingin leveydessä */
+  display: flex; 
+  align-items: center; 
+  gap: 30px; 
+  max-width: 1200px; 
+  margin: 40px auto; 
+  padding: 0 20px; 
+  box-sizing: border-box; 
+  text-align: center;
 }
 
-/* Tekstin tyylit */
-.about-me-text {
-  flex: 1; /* Teksti vie jäljellä olevan tilan */
-  text-align: left; /* Tasataan vasempaan */
-}
 
 /* Tekstin otsikon ja kappaleen tyylit */
-.about-me-text h2 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem); /* Responsiivinen fonttikoko */
-  color: #F5F5F5; /* Tummanruskea väri */
-  margin-bottom: 15px;
-}
-
 .about-me-text p {
-  font-size: clamp(1rem, 2vw, 1.2rem); /* Responsiivinen fonttikoko */
-  color: #F5F5F5;
-  line-height: 1.6; /* Riviväli */
+  font-size: clamp(1rem, 2vw, 1.2rem); /* Responsiivinen fonttikoko näytön koon mukaan */
+  color: #B0B0B0;
+  line-height: 1.6;
+  text-align: center; 
 }
 
-/* Kuvan kontin tyylit */
+/* Kuvan koko pysyy samana */
 .about-me-image {
-  flex: 0 0 300px; /* Kuvan leveys on kiinteä 300px */
+  flex: 0 0 500px; 
 }
 
-.about-me-image img {
-  width: 100%; /* Kuva vie koko kontin leveydet */
-  height: auto; /* Korkeus skaalaantuu suhteessa */
-  border-radius: 8px; /* Pyöristetyt kulmat */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Varjo */
-  object-fit: cover; /* Pidä kuvan suhde oikeana */
-}
-
-/* Sertificate box */
+/* Koulutukset laatikko ja sen tyylit */
 .certificate-container {
-  margin-top: 32px;
-  padding: 24px;
-  background-color: #2A0A0F; /*burgundy card*/
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Hieman läpikuultava valkoinen reuna */
-  border-radius: 12px; /* pyöristetyt kulmat */
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding: 15px;
+  background-color: #2A0A0F; 
+  border: 5px solid rgba(255, 255, 255, 0.1); 
+  border-radius: 12px; 
+  text-align: center;
 }
 
+/* Koulutus laatikon hover ja tyylit */
+.certificate-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(128, 0, 32, 0.1),
+  0 10px 10px -5px rgba(128, 0, 32, 0.04);
+  border-color: rgba(212, 175, 55, 0.5); 
+}
+
+/* Koulutus laatikon tekstin asettelu ja tyyli */
 .certificate-container h3 {
   font-weight: 600;
-  margin-bottom: 16px;
-  color: #F5F5F5;
+  margin-bottom: 10px;
+  color: #D4AF37;
+  font-size: 30px;
 }
 
-.certificate-container ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.certificate-container li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 12px;
-  color: #B0B0B0; /* text-muted-foreground */
-}
-
-.certificate-container li:last-child {
-  margin-bottom: 0;
-}
-
-.certificate-container .bullet {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #D4AF37; /* bg-accent (kultainen) */
-  margin-top: 8px;
-  flex-shrink: 0;
-}
-
-/* Responssiivisuus mobiilille */
+/* MEDIA QUERYT */
+/* Responssiivisuus mobiililaitteille */
 @media (max-width: 768px) {
   .about-me-container {
-    flex-direction: column; /* Aseta teksti ja kuva allekkain */
-    text-align: center; /* Keskitä teksti mobiilissa */
-    gap: 20px; /* Pienempi väli */
+    flex-direction: column; 
+    text-align: center; 
+    gap: 20px; 
   }
 
+  /* Tekstin keskittäminen */
   .about-me-text {
-    text-align: center; /* Keskitä teksti */
+    text-align: center; 
   }
 
+  /* Tämä käyttää koko puhelimen leveyttä */
   .about-me-image {
-    flex: 0 0 auto; /* Poista kiinteä leveys */
-    width: 100%; /* Kuva täyttää koko leveydensä */
-    max-width: 300px; /* Maksimileveys */
-    margin: 0 auto; /* Keskitetään kuva */
+    flex: 0 0 auto; 
+    width: 100%; 
+    max-width: 300px; 
+    margin: 0 auto; 
   }
 }
+
+

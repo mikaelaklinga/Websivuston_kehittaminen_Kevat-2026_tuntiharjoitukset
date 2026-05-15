@@ -16,125 +16,131 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
+    <!-- Erillisen javascript koodin linkitys HTML:ään-->
     <script src="main.js"></script>
   </head>
+
   <body>
     <header class="header" id="header">
-    <nav class="nav-container">
-      <div class="nav-flex">
-        
-        <!-- Logo -->
-        <a href="./index.html" class="logo-link">
-          <div class="logo-circle">
-            <img src="./images/kipukaarilogo.jpeg" alt="Kipukaari Logo" class="logo-image">
-          </div>
-          <span class="logo-text">Kipukaari</span>
-        </a>
-
-        <!-- Desktop navigaatio -->
-        <div class="nav-links">
-          <a href="./index.html" class="nav-link">
-            Etusivu
-            <span class="nav-underline"></span>
+      <nav class="nav-container">
+        <div class="nav-flex">
+          <!-- Logon lisöys sivulle -->
+          <a href="./index.html" class="logo-link">
+            <div class="logo-circle">
+              <img
+                src="./images/kipukaarilogo.jpeg"
+                alt="Kipukaari Logo"
+                class="logo-image"
+              />
+            </div>
+            <span class="logo-text">Kipukaari</span>
           </a>
-          <a href="./palvelut.html" class="nav-link">Palvelut</a>
-          <a href="./tietoa.html" class="nav-link active">Tietoa</a>
-          <a href="./ajanvaraus.html" class="nav-link">Ajanvaraus</a>
+
+          <!-- Työpöytäversion navigaatio -->
+          <div class="nav-links">
+            <a href="./index.html" class="nav-link"
+              >Etusivu<span class="nav-underline"></span
+            ></a>
+            <a href="./palvelut.html" class="nav-link">Palvelut</a>
+            <a href="./tietoa.html" class="nav-link active">Tietoa</a>
+            <a href="./ajanvaraus.html" class="nav-link">Ajanvaraus</a>
+          </div>
+
+          <!-- Mobiiliversion hamburger-nappi -->
+          <button
+            class="mobile-toggle"
+            onclick="toggleMenu()"
+            aria-label="Toggle menu"
+          >
+            <svg
+              class="menu-icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg
+              class="close-icon hidden"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
         </div>
 
-        <!-- Mobiili hamburger-nappi -->
-        <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
-          <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-          <svg class="close-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Mobiilivalikko -->
-      <div class="mobile-menu" id="mobileMenu">
-        <a href="./index.html" class="mobile-link">Etusivu</a>
-        <a href="./palvelut.html" class="mobile-link">Palvelut</a>
-        <a href="./tietoa.html" class="mobile-link active">Tietoa</a>
-        <a href="./ajanvaraus.html" class="mobile-link">Ajanvaraus</a>
-      </div>
-    </nav>
-  </header>
-
-  <script>
-    // Sticky header scroll-efekti
-    window.addEventListener('scroll', function() {
-      const header = document.getElementById('header');
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
-    // Mobiilivalikon toggle
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      const menuIcon = document.querySelector('.menu-icon');
-      const closeIcon = document.querySelector('.close-icon');
-      
-      menu.classList.toggle('open');
-      menuIcon.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-    }
-  </script>
+        <!-- Mobiiliversion navigaatiovalikko -->
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="./index.html" class="mobile-link">Etusivu</a>
+          <a href="./palvelut.html" class="mobile-link">Palvelut</a>
+          <a href="./tietoa.html" class="mobile-link active">Tietoa</a>
+          <a href="./ajanvaraus.html" class="mobile-link">Ajanvaraus</a>
+        </div>
+      </nav>
+    </header>
 
     <main>
+      <!-- Tietoa-sivun Kuka minä olen? -esittely sekä kuva Akista. -->
       <div class="about-me-container">
-  <div class="about-me-text">
-    <h2>Kuka minä olen?</h2>
-    <p>Olen Aki Arvila, kokenut hieroja, jonka tavoitteena on auttaa sinua löytämään rentoutumisen ja liikkuvuuden ilo.
-Jokainen asiakkaani on minulle tärkeä, ja siksi panostan yksilölliseen hoitoon, joka vastaa juuri sinun tarpeisiisi. Tule kokeilemaan, miten hieronta voi parantaa elämääsi laadukkaasti!
-</p>
-  </div>
-  <div class="about-me-image">
-    <img src="./images/minunkuvani-aki.png" class="rounded mx-auto d-block" alt="...">
-  </div>
-</div>
+        <div class="about-me-text">
+          <h2>Kuka minä olen?</h2>
+          <p>
+            Olen Aki Arvila, kokenut hieroja, jonka tavoitteena on auttaa sinua
+            löytämään rentoutumisen ja liikkuvuuden ilo. Jokainen asiakkaani on
+            minulle tärkeä, ja siksi panostan yksilölliseen hoitoon, joka vastaa
+            juuri sinun tarpeisiisi. Tule kokeilemaan, miten hieronta voi
+            parantaa elämääsi laadukkaasti!
+          </p>
+          <!-- Koulutus osio korostettuna laatikossa tekstin alapuolella. -->
+          <div class="certificate-container">
+            <h3>Koulutettu hieroja</h3>
+          </div>
+        </div>
 
-<div class="certificate-container">
-  <h3>Koulutus & sertifikaatit</h3>
-  <ul>
-    <li>
-      <div class="bullet"></div>
-      <span>Koulutus 1</span>
-    </li>
-    <li>
-      <div class="bullet"></div>
-      <span>Sertifikaatti 1</span>
-    </li>
-  </ul>
-</div>
+        <div class="about-me-image">
+          <img
+            src="./images/minunkuvani-aki.png"
+            class="rounded mx-auto d-block"
+            alt="oma kuva"
+          />
+        </div>
+      </div>
 
+      <!-- Koulutus osio korostettuna laatikossa kuvan ja tekstin alapuolella. -->
     </main>
 
+    <!-- Footer sisältöineen -->
     <footer id="mainFooter">
       <div class="footer-content">
-<div class="footer-contact">
-      <h3>Kipukaari</h3>
-      <p>Rentoutumisen ja hyvän olon asiantuntija Lahdessa. Ammattitaitoista hierontapalvelua.</p> 
-    </div>
+        <div class="footer-contact">
+          <h3>Kipukaari Ky</h3>
+          <p>
+            Rentoutumisen ja hyvän olon asiantuntija Lahdessa. Ammattitaitoista
+            hierontapalvelua.
+          </p>
+        </div>
 
-      <div class="footer-contact">
-      <h3>Yhteystiedot</h3>
-      <p>Puhelin: +3584011258551</p>
-      <p>Sähköposti: kipukaari@hotmail.com</p>
-      <p>Ajanvaraus: lahti.ole.fit</p>
-    </div>
-    </div>
+        <div class="footer-contact">
+          <h3>Yhteystiedot</h3>
+          <p>Puhelin: <a href="tel:+358401258551">+358401258551</a></p>
+          <p>Sähköposti: <a href="mailto:kipukaari@hotmail.com">kipukaari@hotmail.com</a></p>
+          <p>Ajanvaraus: <a href="https://avoinna24.fi/lahdenkuntohoito/">Avoinna24/Lahden Kuntohoito</a></p>
+        </div>
+      </div>
 
-    <div class="footer-copyright">
-      <p>Copyright 2026 © Kipukaari.</p>
+      <div class="footer-copyright">
+        <p>Copyright 2026 © Kipukaari Ky.</p>
       </div>
     </footer>
   </body>

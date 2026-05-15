@@ -1,12 +1,8 @@
-/*tagit tai elementit */
+/*TAGIT JA ELEMENTIT */
 html, body {
     color: white;
     background-color: #1A0508;
     height: 100%;
-}
-
-img {
-    width: 100%;
 }
 
 main {
@@ -16,162 +12,46 @@ main {
     margin-right:auto;
 }
 
+img {
+    width: 100%;
+}
+
 a { 
     color: white;
 }
 
-
-/* luokat */ 
-
-.topnav {
-  background-color: #1A0508;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  flex-wrap: wrap;
+h1, h2, h3 {
+  font-size: clamp(18px, 3vw, 28px); /* Responsiivinen fonttikoko tehty tällä */
 }
 
-.topnav .logo {
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 0; 
-  margin: 0; 
-  height: 100%; 
-  display: flex;
-  align-items: center;
-}
-
-.topnav a {
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  margin: 0 5px;
-}
-/* Hover and active-space */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #B8860B;
-  color: rgb(255, 255, 255);
-}
-
-/* Hamburger navigation icon */
-.topnav .icon {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 14px 16px;
-  color: #f2f2f2;
-  font-size: 17px;
-  cursor: pointer;
-}
-
-
-/* id:t */
-#mainNav {
-    font-size: 1.5em;
-}
-
-#mainFooter {
-    padding: 3px;
-    background-color: #1A0508;
-    color: white;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.footer-content {
-  display: flex; /* Aseta lapset vierekkäin */
-  gap: 40px; /* Väli osioiden välillä */
-  width: 100%; /* Käytä koko leveyttä */
-}
-
-.footer-contact {
-   /* Väli copyrightin ja yhteystietojen välille */
- 
-  padding: 32px;
-  flex: 1; 
-  min-width: 0;
-}
-
-.footer-copyright {
-    width: 100%; /* Käytä koko leveyttä */
-    text-align: center; /* Keskitä copyright-teksti */
-    margin-top: auto; /* Työnnä copyright alas */
-     background-color: #1A0508; /* bg-card */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* border-border */
-  border-radius: 12px;
-  padding: 12px;
+p {
+  font-size: clamp(14px, 1.8vw, 18px);
 }
 
 
 
-/* media queryt*/
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  
-  .topnav a.icon {
-    display: block;
-  }
-}
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
 
-
-/* navigaatio uusi */
-/* Navigaatio */
+/* LUOKAT */
+/* Navigaatiovalikolle ja yläreunukselle määritellyt tyylit */
 .header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: #1A0508; /* bg-background */
+  background-color: #1A0508; 
   transition: all 0.3s ease;
 }
 
 .header.scrolled {
-  background-color: rgba(26, 5, 8, 0.95); /* bg-background/95 */
+  background-color: rgba(26, 5, 8, 0.95); 
   backdrop-filter: blur(8px);
   box-shadow: 0 10px 15px -3px rgba(128, 0, 32, 0.1),
-              0 4px 6px -2px rgba(128, 0, 32, 0.05);
+  0 4px 6px -2px rgba(128, 0, 32, 0.05);
 }
 
 .nav-container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 16px;
-}
-
-@media (min-width: 640px) {
-  .nav-container {
-    padding: 0 24px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .nav-container {
-    padding: 0 32px;
-  }
 }
 
 .nav-flex {
@@ -181,7 +61,7 @@ a {
   height: 80px;
 }
 
-/* Logo */
+/* Logolle luodut rajaukset ja tyylit */
 .logo-link {
   display: flex;
   align-items: center;
@@ -215,17 +95,11 @@ a {
   letter-spacing: 0.025em;
 }
 
-/* Desktop navigaatio */
+/* Työpöytäversion navigaatiovalikon tyylit */
 .nav-links {
   display: none;
   align-items: center;
   gap: 32px;
-}
-
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex;
-  }
 }
 
 .nav-link {
@@ -237,11 +111,11 @@ a {
 }
 
 .nav-link:hover {
-  color: #D4AF37; /* hover:text-accent */
+  color: #D4AF37; 
 }
 
 .nav-link.active {
-  color: #D4AF37; /* text-accent */
+  color: #D4AF37; 
 }
 
 .nav-underline {
@@ -251,14 +125,14 @@ a {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #D4AF37; /* bg-accent */
+  background-color: #D4AF37; 
 }
 
 .nav-link.active .nav-underline {
   display: block;
 }
 
-/* Mobiili hamburger-nappi */
+/* Mobiiliversion hamburger-napin tyylit */
 .mobile-toggle {
   display: flex;
   align-items: center;
@@ -272,21 +146,15 @@ a {
   transition: background-color 0.3s ease;
 }
 
-@media (min-width: 768px) {
-  .mobile-toggle {
-    display: none;
-  }
-}
-
 .mobile-toggle:hover {
-  background-color: #3A1015; /* hover:bg-muted */
+  background-color: #3A1015; 
 }
 
 .hidden {
   display: none;
 }
 
-/* Mobiilivalikko */
+/* Mobiilinavigaatiovalikon tyylit */
 .mobile-menu {
   display: none;
   flex-direction: column;
@@ -299,12 +167,6 @@ a {
   display: flex;
 }
 
-@media (min-width: 768px) {
-  .mobile-menu {
-    display: none !important;
-  }
-}
-
 .mobile-link {
   padding: 12px 16px;
   border-radius: 8px;
@@ -314,27 +176,15 @@ a {
 }
 
 .mobile-link:hover {
-  background-color: #3A1015; /* hover:bg-muted */
+  background-color: #3A1015; 
 }
 
 .mobile-link.active {
-  background-color: #800020; /* bg-primary */
-  color: #F5F5F5; /* text-primary-foreground */
+  background-color: #800020; 
+  color: #F5F5F5; 
 }
 
-/* Animaatiot */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
+/* Etusivun kuva ja teksti keskitettynä ja responsiivisena */
 .image-container {
   position: relative;
   display: inline-block;
@@ -356,14 +206,14 @@ a {
 }
 
 .image-text p {
-  margin: 5px 0 15px 0; /* Lisää tilaa painikkeen yläpuolelle */
+  margin: 5px 0 15px 0; 
   font-size: 15px;
 }
 
-/* Painikkeen tyylit */
+/* Etusivun painikkeen "varaa aika" tyylit */
 .image-button {
   display: inline-block;
-  background-color: #800020; /* Tummanpunainen tausta */
+  background-color: #800020; 
   color: white;
   padding: 12px 20px;
   border-radius: 10px;
@@ -374,79 +224,26 @@ a {
 }
 
 .image-button:hover {
-  background-color: #6B0F1A; /* Vaaleampi punainen hover-värinä */
+  background-color: #6B0F1A; 
 }
 
-
-
-.container {
-  width: 90%; /* 90% näytön leveydestä */
-  max-width: 1200px; /* Maksimileveys työpöydällä */
-  margin: 0 auto; /* Keskitetään */
-  padding: 20px;
-  box-sizing: border-box; /* Padot eivät lisää leveyttä */
-}
-
-h1, h2, h3 {
-  font-size: clamp(18px, 3vw, 28px); /* Minimi 18px, suositus 3vw, maksimissaan 28px */
-}
-
-p {
-  font-size: clamp(14px, 1.8vw, 18px);
-}
-
-/* Tabletit (768px - 1024px) */
-@media (max-width: 1024px) {
-  .flex-container {
-    gap: 15px;
-  }
-}
-
-/* Mobiilit (alle 768px) */
-@media (max-width: 768px) {
-  .flex-container {
-    flex-direction: column; /* Aseta elementit pystysuunnassa */
-  }
-
-  .image-text h3 {
-    font-size: 20px; /* Kiinteä koko mobiilissa */
-  }
-
-  .image-button {
-    width: 80%; /* Painike käyttää 80% leveydestä */
-    margin: 0 auto; /* Keskitetään */
-  }
-}
-
-/* Pienet mobiilit (alle 480px) */
-@media (max-width: 480px) {
-  .image-text {
-    font-size: 14px; /* Pienempi teksti */
-  }
-
-  .image-button {
-    padding: 6px 12px; /* Pienempi padding */
-  }
-}
-
-
-/* Otsikko */
-.palvelukortti h3 {
+/* Etusivun palvelukorttien fontti tyylit */
+.service-card h3 {
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 12px;
   color: #F5F5F5;
 }
 
-/* Kuvaus */
-.palvelukortti p {
-  color: #B0B0B0; /* text-muted-foreground */
+/* Etusivun palvelukorttien fontti tyylit */
+.service-card p {
+  color: #B0B0B0; 
   margin-bottom: 24px;
   line-height: 1.6;
 }
 
-/* Footer (kesto + hinta) */
-.palvelukortti-footer {
+/* Etusivun palvelukorttien footer tyylit */
+.servicecard-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -454,33 +251,30 @@ p {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.kesto {
-  color: #B0B0B0; /* text-muted-foreground */
+/* Etusivun palvelukorttien footerin kesto ja hinta tyylit */
+.time {
+  color: #B0B0B0; 
 }
 
-.hinta {
+/* Etusivun palvelukorttien footerin hinta tyylit */
+.price {
   font-size: 24px;
   font-weight: 700;
-  color: #D4AF37; /* text-accent */
+  color: #D4AF37; 
 }
 
-.palvelukortti:hover {
+/* Etusivun palvelukorttien hover-efekti */
+.service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 25px -5px rgba(128, 0, 32, 0.1),
-              0 10px 10px -5px rgba(128, 0, 32, 0.04);
+  0 10px 10px -5px rgba(128, 0, 32, 0.04);
   border-color: rgba(212, 175, 55, 0.5); /* hover:border-accent/50 */
 }
 
-
-.palvelukortti-ikoni svg {
-  width: 32px;
-  height: 32px;
-}
-
-/* Palvelukortti */
-.palvelukortti {
+/* Etusivun palvelukorttien tyylit */
+.service-card {
   background-color: #2A0A0F; /* bg-card */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* border-border */
+  border: 1px solid rgba(255, 255, 255, 0.1); 
   border-radius: 12px;
   padding: 32px;
   transition: all 0.3s ease;
@@ -488,8 +282,8 @@ p {
   padding-top: 15px;
 }
 
-
-.palvelut-grid {
+/* Etusivun palvelukorttien asettelu tyylit */
+.services-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
@@ -497,3 +291,161 @@ p {
   margin: 0 auto;
   padding: 80px 16px;
 }
+
+/* Footerin tyylit */
+.footer-content {
+  display: flex; 
+  gap: 40px; 
+  width: 100%; 
+  color: #B0B0B0
+}
+
+/* Footerin tyylit */
+.footer-contact {
+  padding: 32px;
+  flex: 1; 
+  min-width: 0;
+}
+
+/*Footerin tyylit */
+.footer-copyright {
+    width: 100%; 
+    text-align: center; 
+    margin-top: auto; /* Copyright puskettu tällä koodilla sivun alareunaan */
+     background-color: #1A0508; 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  border-radius: 12px;
+  padding: 12px;
+}
+
+
+
+
+/* ID:t */
+#mainNav {
+    font-size: 1.5em;
+}
+
+#mainFooter {
+    padding: 3px;
+    background-color: #1A0508;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+
+/* MEDIA QUERYT */
+/* Tämä piilottaa navigaatilinkit mobiilissa, näytetään vain hamburger-valikko */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  
+  .topnav a.icon {
+    display: block;
+  }
+}
+/* Tämä on mobiilivalikon tyyli kun se on avattuna */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+/* Tämä näyttää navigaation tyylit isommalla näytöllä, joka on vähintään 640px */
+@media (min-width: 640px) {
+  .nav-container {
+    padding: 0 24px;
+  }
+}
+
+/* Media kysely isommille näytöille, jota on vähintään 1024px */
+@media (min-width: 1024px) {
+  .nav-container {
+    padding: 0 32px;
+  }
+}
+
+/* Näyttää navigaatiolinkit työpöytänäytöllä */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+/* Tämän media-kyselyn avullla voimme piilottaa mobiilivalikon */
+@media (min-width: 768px) {
+  .mobile-toggle {
+    display: none;
+  }
+}
+
+/* Tämä on käytössä tableteille ja pienemmille työpöytänäytöille*/
+@media (max-width: 1024px) {
+  .flex-container {
+    gap: 15px;
+  }
+}
+
+/* Tätä käytetään kun näyttö on pienempi kuin 768px */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column; 
+  }
+
+  .image-text h3 {
+    font-size: 20px; 
+  }
+
+  .image-button {
+    width: 80%; 
+    margin: 0 auto; 
+  }
+}
+
+/* Sovelletaan pieniin mobiilinäyttöihin */
+@media (max-width: 480px) {
+  .image-text {
+    font-size: 14px; 
+  }
+
+  .image-button {
+    padding: 6px 12px; 
+  }
+}
+
+/* Responssiivisuus mobiilinäyttöihin, mm. tekstit asettuu kapealle näytölle allekkain. */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* Animaatiot */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
