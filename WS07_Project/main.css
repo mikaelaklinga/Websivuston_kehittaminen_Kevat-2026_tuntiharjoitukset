@@ -28,7 +28,15 @@ p {
   font-size: clamp(14px, 1.8vw, 18px);
 }
 
-
+/* Pakotin rivittäytymisen, koska footerin tekstit ei toiminut mobiilissa täydellisesti*/
+footer p,
+footer a {
+  word-break: break-word;     
+  overflow-wrap: break-word;  
+  white-space: normal;        
+  max-width: 100%;            
+  margin: 4px 0;             
+}
 
 
 /* LUOKAT */
@@ -294,7 +302,7 @@ p {
 
 /* Footerin tyylit */
 .footer-content {
-  display: flex; 
+  display: flex;
   gap: 40px; 
   width: 100%; 
   color: #B0B0B0
@@ -318,7 +326,12 @@ p {
   padding: 12px;
 }
 
-
+/* Tällä estän skrollauksen sivuttaissuunnassa */
+.footer-contact {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden; 
+}
 
 
 /* ID:t */
@@ -447,5 +460,3 @@ p {
     transform: translateY(0);
   }
 }
-
-
