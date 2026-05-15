@@ -7,6 +7,16 @@
 
 /* Tästä alaspäin tuotekorttien tyylit */
 
+/* Palvelukorttien grid-asettelu */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 16px;
+}
+
 .service-card-icon svg {
   width: 32px;
   height: 32px;
@@ -72,5 +82,12 @@
   to {
     opacity: 2;
     transform: translateY(0);
+  }
+}
+
+/* 3 korttia rinnakkain isommilla näytöillä */
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 saraketta */
   }
 }
