@@ -195,7 +195,7 @@ footer a {
 /* Etusivun kuva ja teksti keskitettynä ja responsiivisena */
 .image-container {
   position: relative;
-  display: inline-block;
+
 }
 
 .image-text {
