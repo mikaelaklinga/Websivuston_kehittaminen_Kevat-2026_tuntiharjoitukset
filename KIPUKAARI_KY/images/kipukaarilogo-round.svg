@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Kipukaari logo">
   <defs>
-    <path id="kipukaari-arc" d="M 150 670 Q 512 902 874 670" />
+    <path id="kipukaari-arc" d="M 118 655 Q 512 898 906 655" />
     <radialGradient id="burgundy-glow" cx="50%" cy="45%" r="60%">
       <stop offset="0%" stop-color="#781326" stop-opacity="0.38" />
       <stop offset="100%" stop-color="#4b0612" stop-opacity="0" />
@@ -12,9 +12,9 @@
   <circle cx="512" cy="512" r="438" fill="none" stroke="#c8a75d" stroke-opacity="0.45" stroke-width="3" />
   <text fill="#ffffff"
         font-family="Garamond, Georgia, 'Times New Roman', serif"
-        font-size="142"
+        font-size="126"
         font-weight="700"
-        letter-spacing="4">
+        letter-spacing="2">
     <textPath href="#kipukaari-arc" startOffset="50%" text-anchor="middle">KIPUKAARI</textPath>
   </text>
 </svg>
