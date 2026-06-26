@@ -240,7 +240,7 @@ p {
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  opacity: 0.68;
+  opacity: 0.78;
 }
 
 .hero-overlay {
@@ -315,16 +315,16 @@ p {
 .btn-primary,
 .image-button,
 .submit-btn {
-  border: 1px solid rgba(200, 167, 93, 0.45);
-  color: #140d09;
-  background-color: var(--gold);
+  border: 1px solid rgba(183, 151, 82, 0.42);
+  color: #17100c;
+  background-color: #b79652;
 }
 
 .btn-primary:hover,
 .image-button:hover,
 .submit-btn:hover {
-  color: #140d09;
-  background-color: #d7bb77;
+  color: #17100c;
+  background-color: #c3a35f;
   transform: translateY(-2px);
 }
 
@@ -332,14 +332,14 @@ p {
 .service-card-button {
   border: 1px solid var(--border);
   color: var(--text);
-  background-color: var(--burgundy);
+  background-color: #47101d;
 }
 
 .btn-secondary:hover,
 .service-card-button:hover {
   border-color: var(--border);
   color: var(--text);
-  background-color: #76182b;
+  background-color: #5a1626;
   transform: translateY(-2px);
 }
 
