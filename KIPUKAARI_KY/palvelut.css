@@ -1,0 +1,93 @@
+/* PALVELUT TIEDOSTON LUOKAT JA TYYLIT */
+/* Suurentaa fonttikokoa */
+.image-text h5 {
+  margin: 0;
+  font-size: 50px;
+}
+
+/* Tästä alaspäin tuotekorttien tyylit */
+
+/* Palvelukorttien grid-asettelu */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 16px;
+}
+
+.service-card-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Palvelukorttien Footer osion nappien tyylit */ 
+.service-card-button {
+  margin-top: 24px;
+  padding: 8px 16px;
+  background-color: #800020; 
+  color: #F5F5F5; 
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-card-button:hover {
+  background-color: rgba(128, 0, 32, 0.9); 
+}
+
+
+/* Tietoa palveluista-osion tekstien sijainnit ja tyylit */
+.certificate-container-centered {
+  text-align: center;
+}
+.certificate-container {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  padding: 24px;
+  background-color: #2A0A0F; 
+  border: 4px solid rgba(255, 255, 255, 0.1); 
+  border-radius: 0px; 
+  text-align: center;
+  
+}
+
+/* Listan pallot poistuu ja sisältö keskittyy */
+.certificate-container li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #B0B0B0;
+}
+
+/* MEDIA QUERYT */
+/* Palvelukorttien asettelu */
+@media (min-width: 768px) {
+  .palvelut-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Fade-in animaatio palvelukorteille */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 2;
+    transform: translateY(0);
+  }
+}
+
+/* 3 korttia rinnakkain isommilla näytöillä */
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 saraketta */
+  }
+}

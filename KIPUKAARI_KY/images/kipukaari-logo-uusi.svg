@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Kipukaari logo">
+  <rect width="1024" height="1024" fill="#4a0a17"/>
+  <path d="M 285 430 Q 512 250 739 430" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 342 440 Q 512 310 682 440" fill="none" stroke="#c8a75d" stroke-width="3" stroke-linecap="round"/>
+  <path id="kipukaariTextPath" d="M 162 560 Q 512 720 862 560" fill="none"/>
+  <text fill="#ffffff" font-family="Baskerville, Georgia, serif" font-size="118" font-weight="700" letter-spacing="5">
+    <textPath href="#kipukaariTextPath" startOffset="50%" text-anchor="middle">KIPUKAARI</textPath>
+  </text>
+  <path d="M 250 655 Q 512 760 774 655" fill="none" stroke="#c8a75d" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Kipukaari logo">
+  <defs>
+    <path id="kipukaari-steep-word-arc" d="M 176 548 A 356 356 0 0 0 848 548" />
+    <clipPath id="logo-circle-clip">
+      <circle cx="512" cy="512" r="512" />
+    </clipPath>
+  </defs>
+
+  <image href="./kipukaarilogo-round-base.png" width="1024" height="1024" clip-path="url(#logo-circle-clip)" />
+
+  <text fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="116" font-weight="700" letter-spacing="5">
+    <textPath href="#kipukaari-steep-word-arc" startOffset="50%" text-anchor="middle">KIPUKAARI</textPath>
+  </text>
+</svg>

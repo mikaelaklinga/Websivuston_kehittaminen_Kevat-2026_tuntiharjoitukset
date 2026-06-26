@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kipukaari Ky | Hierontapalvelut Lahdessa</title>
+    <meta
+      name="description"
+      content="Kipukaari Ky tarjoaa ammattitaitoista hierontapalvelua Lahdessa. Tutustu palveluihin ja varaa aika."
+    >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header" id="header">
+      <nav class="nav-container" aria-label="Päänavigaatio">
+        <div class="nav-flex">
+          <a href="./index.html" class="logo-link" aria-label="Kipukaari palvelut">
+            <div class="logo-circle">
+              <img src="./images/kipukaarilogo-round.svg" alt="Kipukaari logo" class="logo-image">
+            </div>
+            <span class="logo-text">Kipukaari</span>
+          </a>
+
+          <div class="nav-links">
+            <a href="./index.html" class="nav-link active">
+              Palvelut
+              <span class="nav-underline"></span>
+            </a>
+            <a href="./tietoa.html" class="nav-link">Kuka olen?</a>
+            <a href="./ajanvaraus.html" class="nav-link">Ajanvaraus</a>
+          </div>
+
+          <button class="mobile-toggle" type="button" onclick="toggleMenu()" aria-label="Avaa valikko">
+            <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="close-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="./index.html" class="mobile-link active">Palvelut</a>
+          <a href="./tietoa.html" class="mobile-link">Kuka olen?</a>
+          <a href="./ajanvaraus.html" class="mobile-link">Ajanvaraus</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img src="./images/hero-kipukaari14.jpg" class="hero-image" alt="Rauhallinen hierontatila">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1>Tervetuloa rentoutumaan</h1>
+          <p>
+            Ammattitaitoista hierontapalvelua Lahdessa. Hoito suunnitellaan sinun
+            tarpeidesi mukaan, rauhallisesti ja huolellisesti.
+          </p>
+          <div class="hero-actions">
+            <a href="./ajanvaraus.html" class="btn-primary">Varaa aika</a>
+            <a href="#palvelut" class="btn-secondary">Katso palvelut</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-section" aria-labelledby="intro-title">
+        <div class="section-heading">
+          <p class="eyebrow">Hyvinvointia arkeen</p>
+          <h2 id="intro-title">Hierontaa, joka auttaa palautumaan</h2>
+          <p>
+            Kipukaari yhdistää klassisen hieronnan, liikkuvuuden tukemisen ja
+            yksilöllisen kohtaamisen. Tavoitteena on kevyempi olo ja parempi arki.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="palvelut" aria-labelledby="services-title">
+        <div class="section-heading">
+          <p class="eyebrow">Palvelut</p>
+          <h2 id="services-title">Klassinen hieronta</h2>
+          <p>Valitse lyhyt täsmähoito tai pidempi aika perusteellisempaan palautumiseen.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Klassinen hieronta</h3>
+            <p>
+              Nopea ja tehokas hieronta kiireisille. Kohdennettu hoito kireimmille
+              alueille, kuten niskaan, hartioihin tai selkään.
+            </p>
+            <div class="servicecard-footer">
+              <span class="time">25 min</span>
+              <span class="price">38 €</span>
+            </div>
+            <a href="./ajanvaraus.html" class="service-card-button">Varaa aika</a>
+          </article>
+
+          <article class="service-card featured-card">
+            <h3>Klassinen hieronta</h3>
+            <p>
+              Monipuolinen hieronta, joka kattaa useamman ongelma-alueen. Sopii
+              rentoutumiseen ja jännityksen purkamiseen koko vartalossa.
+            </p>
+            <div class="servicecard-footer">
+              <span class="time">40 min</span>
+              <span class="price">45 €</span>
+            </div>
+            <a href="./ajanvaraus.html" class="service-card-button">Varaa aika</a>
+          </article>
+
+          <article class="service-card">
+            <h3>Klassinen hieronta</h3>
+            <p>
+              Enemmän aikaa jännitysten purkamiseen, verenkierron parantamiseen
+              ja syvään rentoutumiseen.
+            </p>
+            <div class="servicecard-footer">
+              <span class="time">55 min</span>
+              <span class="price">52 €</span>
+            </div>
+            <a href="./ajanvaraus.html" class="service-card-button">Varaa aika</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="mainFooter">
+      <div class="footer-content">
+        <div class="footer-contact">
+          <h3>Kipukaari Ky</h3>
+          <p>
+            Rentoutumisen ja hyvän olon asiantuntija Lahdessa.
+            Ammattitaitoista hierontapalvelua.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Yhteystiedot</h3>
+          <p>Puhelin: <a href="tel:+358401258551">+358 40 125 8551</a></p>
+          <p>Sähköposti: <a href="mailto:kipukaari@hotmail.com">kipukaari@hotmail.com</a></p>
+          <p>Ajanvaraus: <a href="https://avoinna24.fi/lahdenkuntohoito/">Avoinna24 / Lahden Kuntohoito</a></p>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <p>Copyright 2026 © Kipukaari Ky.</p>
+      </div>
+    </footer>
+  </body>
+</html>

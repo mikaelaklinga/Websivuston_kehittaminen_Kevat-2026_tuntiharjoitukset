@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuka olen? | Kipukaari Ky</title>
+    <meta
+      name="description"
+      content="Tutustu Kipukaari Ky:n hierojaan ja palveluiden taustaan."
+    >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header" id="header">
+      <nav class="nav-container" aria-label="Päänavigaatio">
+        <div class="nav-flex">
+          <a href="./index.html" class="logo-link" aria-label="Kipukaari palvelut">
+            <div class="logo-circle">
+              <img src="./images/kipukaarilogo-round.svg" alt="Kipukaari logo" class="logo-image">
+            </div>
+            <span class="logo-text">Kipukaari</span>
+          </a>
+
+          <div class="nav-links">
+            <a href="./index.html" class="nav-link">Palvelut</a>
+            <a href="./tietoa.html" class="nav-link active">
+              Kuka olen?
+              <span class="nav-underline"></span>
+            </a>
+            <a href="./ajanvaraus.html" class="nav-link">Ajanvaraus</a>
+          </div>
+
+          <button class="mobile-toggle" type="button" onclick="toggleMenu()" aria-label="Avaa valikko">
+            <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="close-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="./index.html" class="mobile-link">Palvelut</a>
+          <a href="./tietoa.html" class="mobile-link active">Kuka olen?</a>
+          <a href="./ajanvaraus.html" class="mobile-link">Ajanvaraus</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section about-section about-page" aria-labelledby="about-title">
+        <div class="about-me-container">
+          <div class="about-me-text">
+            <h1 id="about-title">Koulutettu Hieroja - Aki Arvila</h1>
+            <p>
+              Olen koulutettu hieroja, jonka tavoitteena on auttaa sinua
+              löytämään rentoutumisen ja liikkuvuuden ilo. Jokainen asiakkaani on
+              minulle tärkeä, ja siksi panostan yksilölliseen hoitoon, joka vastaa
+              juuri sinun tarpeisiisi.
+            </p>
+            <p>
+              Hoidossa tärkeintä on rauhallinen kohtaaminen, kuunteleminen ja
+              käytännönläheinen apu arjen kuormitukseen.
+            </p>
+            <a href="./ajanvaraus.html" class="btn-primary">Varaa aika</a>
+          </div>
+
+          <div class="about-me-image">
+            <img src="./images/kuka-olen-aki.jpg" alt="Aki Arvila, Kipukaari Ky">
+          </div>
+        </div>
+      </section>
+
+      <section class="section service-info" aria-labelledby="more-services-title">
+        <div class="section-heading">
+          <h2 id="more-services-title">Tukea kehon hyvinvointiin</h2>
+          <p>
+            Palvelut voivat painottua rentoutumiseen, liikkuvuuteen tai liikunnan
+            aloittamisen tukemiseen tilanteesi mukaan.
+          </p>
+        </div>
+        
+
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>Klassinen hieronta</h3>
+            <p>
+              Rentouttava ja jännityksiä lieventävä hieronta koko vartalolle.
+              Ihanteellinen stressin purkamiseen ja lihasten rentouttamiseen.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Mobilisaatio</h3>
+            <p>
+              Liikkuvuutta tukeva hoito nivelille, lihaksille ja sidekudoksille.
+              Tavoitteena on luonnollisempi liikerata ja kivun väheneminen.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Apua liikunnan aloittamiseen?</h3>
+            <p>
+              Henkilökohtainen ohjaus liikunnan aloittamiseen turvallisesti ja
+              motivaation löytämiseen pitkänkin tauon jälkeen.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="mainFooter">
+      <div class="footer-content">
+        <div class="footer-contact">
+          <h3>Kipukaari Ky</h3>
+          <p>
+            Rentoutumisen ja hyvän olon asiantuntija Lahdessa.
+            Ammattitaitoista hierontapalvelua.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Yhteystiedot</h3>
+          <p>Puhelin: <a href="tel:+358401258551">+358 40 125 8551</a></p>
+          <p>Sähköposti: <a href="mailto:kipukaari@hotmail.com">kipukaari@hotmail.com</a></p>
+          <p>Ajanvaraus: <a href="https://avoinna24.fi/lahdenkuntohoito/">Avoinna24 / Lahden Kuntohoito</a></p>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <p>Copyright 2026 © Kipukaari Ky.</p>
+      </div>
+    </footer>
+  </body>
+</html>
